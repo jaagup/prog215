@@ -8,6 +8,16 @@ class Asukoht{
       while(kraad<-180){kraad+=360;}
 	  return kraad;
    }
+   public double kaugus(Asukoht a2){
+      double dLat=Math.toRadians(this.getLat()-a2.getLat());
+      double dLng=Math.toRadians(this.getLng()-a2.getLng());
+	  double abi=Math.sin(dLat/2)*Math.sin(dLat/2)+
+	    Math.cos(Math.toRadians(this.getLat()))*
+	    Math.cos(Math.toRadians(a2.getLat()))*
+		Math.sin(dLng/2)*Math.sin(dLng/2);
+      double c=2*Math.atan2(Math.sqrt(abi), Math.sqrt(1-abi));
+	  return c*6371;		
+   }
    public @Override String toString(){ 
       return "("+this.getLat()+","+this.getLng()+")";}
    private double[] koordinaadid=new double[2];
