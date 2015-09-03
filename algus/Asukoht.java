@@ -9,6 +9,8 @@ class Asukoht{
 	  return kraad;
    }
    public @Override String toString(){ return "("+lat+","+lng+")";}
-   double lat;
-   double lng;
+   private double lat;
+   private double lng;
+   public double getLat(){return lat;}
+   public double getLng(){return lng;}
 }
