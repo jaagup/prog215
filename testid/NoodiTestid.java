@@ -4,6 +4,10 @@ public class NoodiTestid{
 	@Test
 	public void loomine(){
 		Noot n1=new Noot("A");
+		try{
+		  Noot n2=new Noot("X");
+		  fail("Loodi lubamatu noot");
+		} catch(Exception ex){}
 	}
 	@Test
 	public void korgus(){
