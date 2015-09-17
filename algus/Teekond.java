@@ -11,7 +11,9 @@ class Teekond{
    public @Override String toString(){
       StringBuffer sb=new StringBuffer();
 	  sb.append("Teekond: "+nimetus+"\n");
-	  for(TeekonnaPunkt t: punktid){
+	  for(int i=0; i<punktid.size(); i++){ 
+	    TeekonnaPunkt t=punktid.get(i);
+	      //lisage valjatrukil ka kaugus algpunktist
 	    sb.append(t.koht+" "+t.nimetus+"\n");
 	  }
 	  return sb.toString();

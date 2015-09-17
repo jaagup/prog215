@@ -4,6 +4,9 @@ public class Noot{
 		if(nimetus.equals("A")){
 			korgus=69;
 		}
+		if(nimetus.equals("C")){
+			korgus=60;
+		}
 	}	
 	public int kysiKorgus(){
 		return korgus;
